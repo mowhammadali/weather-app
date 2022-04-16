@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(36, 48, 65);
+}
+
+    /* SECTION 1 ********* */
+
+    
+.top-banner{
+    width: 100%;
+}
+
+.top-banner .container{
+    width: 100%;
+    padding: 80px 80px 60px 80px;
+}
+
+.container .heading{
+    font-size: 70px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 0px 0px 0 rgb(232,170,0),
+    0px 1px 0 rgb(210,148,0),
+    0px 2px 0 rgb(187,125,0),
+    0px 3px 0 rgb(164,102,0),
+    0px 4px 0 rgb(142,80,0),
+    0px 5px 0 rgb(119,57,0),
+    0px 6px  0 rgb(96,34,0),
+    0px 7px 6px rgba(0,0,0,0.22),
+    0px 7px 1px rgba(0,0,0,0.5),
+    0px 0px 6px rgba(0,0,0,.2);
+}
+
+.container form{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 8px;
+}
+
+form .city{
+    height: 44px;
+    width: 400px;
+    font-size: 30px;
+    padding: 2px 5px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    outline: none;
+    background-color: inherit;
+    color: #fff;
+}
+
+form .city::placeholder{
+    color: #fff;
+}
+
+form .get-city{
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background-color: #d61037;
+    color: #fff;
+    border-radius: 14px;
+    box-shadow: inset -5px -5px 15px #890a23,
+            inset 5px 5px 15px #ff164b;
+}
+
+.container .message{
+    font-size: 14px;
+    color: #18d470;
+}
+
+
+
+@media screen and (max-width: 650px) {
+    .container{
+        padding: 30px;
+    }
+
+    .container .heading{
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    .container form{
+        flex-direction: column;
+    }
+
+    form .city{
+        width: 100%;
+    }
+
+    form .get-city{
+        width: 100%;
+        font-size: 24px;
+    }
+    
+}
+
+@media screen and (max-width:900px) and (min-width:651px) {
+    form .get-city{
+        font-size: 16px;
+    }
+}
+
+
+    /* SECTION 2 ********* */
+
+.ajax-section{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.ajax-section .container{
+    padding: 0px 80px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 40px 30px;
+}
+
+.ajax-section .cities{
+    
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 39px;
+    padding: 45px 30px;
+    color: #fff;
+    background: linear-gradient(315deg, #273346, #202b3b);
+    box-shadow:  -5px -5px 18px #121821,
+                 5px 5px 18px #364862;
+}
+
+.cities .city-name{
+    font-size: 25px;
+}
+
+.cities .temp{
+    font-size: 60px;
+}
+
+.cities .bi{
+    font-size: 60px;
+    color: #10d67a;
+}
+
+.cities .condition{
+    font-size: 14px;
+}
+
+span{
+    font-size: 30px;
+}
+
+
+@media screen and (max-width:1080px) {
+    .ajax-section .container{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+}
+
+
+@media screen and (max-width:900px) {
+    .ajax-section .container{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+}
+
+
+@media screen and (max-width:650px) {
+    .ajax-section .container{
+        grid-template-columns: 1fr;
+    }
+
+    .ajax-section .cities{
+        padding: 45px 50px;
+    }
+}
